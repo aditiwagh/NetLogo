@@ -9,12 +9,13 @@ Text inserted between the symbols before and after this text are comments that a
 XML files consist of Elements, the main blocks that make up the XML. Using an XML, you can create or declare hierarchies of elements. For e.g., here we define an element called "Library" which can contain subordinate or child elements such as "go", "setup", "global" and so on. Each of these child elements will also need to be declared in the DTD.
 -->
 
-<!ELEMENT library 	(go?,setup?,global*,breed*,behavior*,quantity*,condition*)>
+<!ELEMENT library 	(go?,setup?,breed+,global*,behavior*,quantity*,condition*)>
 
 <!--
 The character after each sub-element defined above has a special meaning.
-"?" indicates that the child element "go" can occur 0 or 1 time in the element, Library. 
-"*" indicates that the child element "global" can occur 0 or more times in the element, Library.  
+"?" indicates that the child elements "go" and "setup" can occur 0 or 1 time in the element, Library. 
+"*" indicates that the child elements "global", "behavior", "quantity", and "condition" can occur 0 or more times in the element, Library.
+"+" indicates that there must be at least one child element "breed" in the library.
 -->
 
 <!--
