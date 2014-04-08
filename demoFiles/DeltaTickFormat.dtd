@@ -80,23 +80,28 @@ For each element, you can also define Attributes or special information about th
 <!ATTLIST breed
 	singular CDATA #REQUIRED
 	plural	 CDATA #REQUIRED
-	setupNumber CDATA #REQUIRED
-	setupNumbers CDATA #REQUIRED>
+	setupNumber CDATA "50"
+	setupNumbers CDATA "50"
+	maxNumber CDATA "1000">
 
 <!ATTLIST ownVar
 	name 	CDATA #REQUIRED>
 
 <!ATTLIST behavior
 	name CDATA #REQUIRED
-	trait CDATA #IMPLIED>
+	traits CDATA "">
 
 <!ATTLIST condition
-	name CDATA #REQUIRED>
+	name CDATA #REQUIRED
+	traits CDATA "">
 
 <!ATTLIST quantity
 	name CDATA #REQUIRED
 	histo CDATA "false"
-	bars CDATA "0">
+	bars CDATA "0"
+	istrait CDATA "false"
+	xlabel CDATA #REQUIRED
+	ylabel CDATA #REQUIRED>
 
 <!ATTLIST input
 	name CDATA #REQUIRED
